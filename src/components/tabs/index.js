@@ -7,9 +7,9 @@ class Tabs extends Component {
   }
   componentDidMount() {
     const { data } = this.props;
-    const activeTab = data.filter((tabData) => {
+    const activeTab = data.find((tabData) => {
       return tabData.state === "active";
-    })[0];
+    });
     this.setState({ tabs: data, activeTab: activeTab.id });
   }
   handleClick(event, currentTab) {

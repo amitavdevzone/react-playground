@@ -7,7 +7,12 @@ class Accordion extends Component {
     this.state = { accordions: this.props.data };
   }
   componentDidMount() {
-    this.setPanelHeight(".panel-1", false);
+    const tabNumber = 2;
+    const newAccordion = this.state.accordions.find((accordion) => {
+      return accordion.id === tabNumber;
+    });
+    this.handleClick(newAccordion);
+    this.setPanelHeight(`.panel-${tabNumber}`, false);
   }
   handleClick = (currentAccordion) => {
     const newAccordions = this.state.accordions;

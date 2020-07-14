@@ -15,13 +15,24 @@ const data = [
     state: "inactive",
   },
 ];
+const data2 = [
+  { id: 1, name: "About Us", content: () => <AboutUs />, state: "active" },
+  { id: 2, name: "Service", content: () => <Services />, state: "inactive" },
+  {
+    id: 3,
+    name: "Contact Us",
+    content: () => <ContactUs />,
+    state: "inactive",
+  },
+];
 
 function App() {
   return (
     <div className="container">
       <Accordion data={data} />
       <br />
-      <Tabs data={data} />
+      <br />
+      <Tabs data={data2} />
     </div>
   );
 }
