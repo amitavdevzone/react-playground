@@ -3,6 +3,7 @@ import Accordion from "./components/accordion";
 import AboutUs from "./content/aboutus";
 import Services from "./content/services";
 import ContactUs from "./content/contactus";
+import Tabs from "./components/tabs";
 
 const data = [
   { id: 1, name: "About Us", content: () => <AboutUs />, state: "active" },
@@ -19,6 +20,8 @@ function App() {
   return (
     <div className="container">
       <Accordion data={data} />
+      <br />
+      <Tabs data={data} />
     </div>
   );
 }
