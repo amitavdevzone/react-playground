@@ -31,8 +31,7 @@ function App() {
     <div className="container">
       <Accordion data={data} />
       <br />
-      <br />
-      <Tabs data={data2} />
+      <Tabs data={data} />
     </div>
   );
 }

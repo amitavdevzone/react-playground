@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 
 class Tabs extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { tabs: null, activeTab: null };
-  }
+  state = { tabs: null, activeTab: null };
   componentDidMount() {
     const { data } = this.props;
     const activeTab = data.find((tabData) => {
